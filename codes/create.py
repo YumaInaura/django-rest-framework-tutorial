@@ -10,5 +10,5 @@ snippet.save()
 
 serializer = SnippetSerializer(snippet)
 
-print(selializer.data)
+print(serializer.data)
 
