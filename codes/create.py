@@ -8,5 +8,7 @@ from rest_framework.parsers import JSONParser
 snippet = Snippet(code='print("hello, world")\n')
 snippet.save()
 
-print(snippet)
+serializer = SnippetSerializer(snippet)
+
+print(snippet.dataa)
 
