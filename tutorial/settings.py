@@ -61,7 +61,7 @@ LOGGING = {
             'level': 'INFO',
         },
         'django.server': {
-            'handlers': ['django.server'],
+            'handlers': ['console'],
             'level': 'INFO',
             'propagate': False,
         },
@@ -71,6 +71,25 @@ LOGGING = {
             'propagate': False,
         },
     }
+}
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'debug.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
 }
 
 # Quick-start development settings - unsuitable for production
