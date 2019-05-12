@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 
+# Usage
+
+# ./manage.py shell < ./codes/create.py 
+# ./manage.py shell < ./codes/create.py | jq
+
 from snippets.models import Snippet
 from snippets.serializers import SnippetSerializer
 from rest_framework.renderers import JSONRenderer
